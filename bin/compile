@@ -62,10 +62,10 @@ mkdir -p $CACHE_DIR
 title "Generating environment"
 if [ ! -f $CACHE_DIR/vendor.tar.xz ]; then
 	subtitle "Fetching..."
-	curl -s -L "https://static.fountain.com/heroku16-buildpack-opencv3.4.1-v4.tar.gz" > $CACHE_DIR/vendor.tar.xz
+	curl -s -L "https://static.fountain.com/heroku16-buildpack-opencv3.4.1-v4.tar.gz" > $CACHE_DIR/vendor.tar.gz
 fi
 subtitle "Unpacking..."
-tar -xvf $CACHE_DIR/vendor.tar.xz -C $BUILD_DIR
+tar -xvf $CACHE_DIR/vendor.tar.gz -C $BUILD_DIR
 
 # save ENVs for building Golang binaries
 echo "-I$ORIG_BUILD_DIR/.heroku/vendor/include" > $ENV_DIR/CGO_CPPFLAGS
