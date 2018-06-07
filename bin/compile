@@ -60,7 +60,7 @@ cd $BUILD_DIR
 # Setup environment
 mkdir -p $CACHE_DIR
 title "Generating environment"
-if [ ! -f $CACHE_DIR/vendor.tar.xz ]; then
+if [ ! -f $CACHE_DIR/vendor.tar.gz ]; then
 	subtitle "Fetching..."
 	curl -s -L "https://static.fountain.com/heroku16-buildpack-opencv3.4.1-v4.tar.gz" > $CACHE_DIR/vendor.tar.gz
 fi
